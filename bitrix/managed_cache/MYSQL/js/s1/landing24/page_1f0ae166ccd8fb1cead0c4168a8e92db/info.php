@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/components/bitrix/player/wmvplayer/wmvscript.js" => "1531734285188","/bitrix/components/bitrix/player/wmvplayer/silverlight.js" => "153173428517327","/bitrix/components/bitrix/player/wmvplayer/wmvplayer.js" => "153173428524361","/bitrix/components/bitrix/player/mediaplayer/flvscript.js" => "1531734285654",)); ?>

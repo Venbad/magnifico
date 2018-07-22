@@ -10,35 +10,56 @@
 <title><?$APPLICATION->ShowTitle()?></title>
 <?$APPLICATION->ShowHead();?>
 <?IncludeTemplateLangFile(__FILE__);?>
-<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/colors.css" />
-<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/print.css" media="print" />
+<link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/template-styles.css" />
 </head>
-<body>	
-		<div id="panel"><?$APPLICATION->ShowPanel();?></div>
 
-	
-	<table id="grid" align="center" cellspacing="0">
-		<tr>
-			<td id="header-row" colspan="2">
-				<div id="header">
-					<h1 id="title"><?$APPLICATION->IncludeFile(
+<body>
+<div id="panel"><?$APPLICATION->ShowPanel();?></div>
+
+
+
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#main">something</a>
+
+	<header id="masthead" class="site-header" role="banner">
+		<div class="container">
+
+			<div class="site-branding">
+
+				
+
+				<h1 class="site-title"><a href="" rel="home"><?$APPLICATION->IncludeFile(
 									SITE_TEMPLATE_PATH."/include_areas/site_name.php",
 									Array(),
 									Array("MODE"=>"html")
-								);?></h1>
-					<div id="search">
-					<?$APPLICATION->IncludeComponent("bitrix:search.form", "personal", Array(
-											"PAGE"	=>	SITE_DIR."search.php"
-											)
-									);?>
-					</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td id="menu-row" colspan="2">
-				<div id="top-menu">
-					<?$APPLICATION->IncludeComponent(
+								);?></a></h1>
+				<p class="site-description">Just another WPStash Sites site</p>
+				
+
+			</div><!-- .site-branding -->
+
+			<div class="social-menu">
+			<div id="menu-social" class="social-links">
+				<ul id="menu-social" class="menu"><li id="menu-item-9" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9"><a href="https://www.facebook.com/"><span class="screen-reader-text">facebook</span></a></li>
+<li id="menu-item-10" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10"><a href="https://twitter.com/"><span class="screen-reader-text">twitter</span></a></li>
+<li id="menu-item-11" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11"><a href="https://plus.google.com/u/0/"><span class="screen-reader-text">google plus</span></a></li>
+<li id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-12"><a href="https://www.linkedin.com"><span class="screen-reader-text">linkedin</span></a></li>
+<li id="menu-item-61" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61"><a href="https://youtube.com"><span class="screen-reader-text">Youtube</span></a></li>
+<li id="menu-item-62" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-62"><a href="https://www.pinterest.com/"><span class="screen-reader-text">Pinterest</span></a></li>
+</ul>
+			</div>
+
+		</div>
+
+		</div>
+</div>
+	</header><!-- #masthead -->
+
+	<nav id="site-navigation" class="main-navigation" role="navigation">
+		<div class="container">
+
+			<button class="menu-toggle" aria-controls="top-menu" aria-expanded="false">MENU</button>
+			<?$APPLICATION->IncludeComponent(
 						"bitrix:menu", 
 						"personal_tab", 
 						Array(
@@ -47,18 +68,14 @@
 							"USE_EXT"	=>	"N"
 						)
 					);?>
-					<b class="r1"></b>
-						<?if($APPLICATION->GetCurPage(true) == SITE_DIR."index.php"):?>
-							<a href="<?=SITE_DIR?>rss/" id="rss-link"><?=GetMessage("TMPL_RSS")?></a>
-						<?endif?>
-					<b class="r2"></b>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td id="content">
-				<div id="content-wrapper">
-					<?if($APPLICATION->GetCurPage(true) != SITE_DIR."index.php")
+
+
+
+		</div>
+	</nav><!-- #site-navigation -->
+
+	<div id="content" class="site-content">
+<?if($APPLICATION->GetCurPage(true) != SITE_DIR."index.php")
 					{
 						echo "<h1>";
 						$APPLICATION->ShowTitle(false);

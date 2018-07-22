@@ -1,33 +1,53 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Блог", 
-		SITE_DIR, 
+		"Home", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Фото", 
-		SITE_DIR."photo/", 
+		"About", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Обо мне", 
-		SITE_DIR."about.php", 
+		"Design", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"Контакты", 
-		SITE_DIR."contacts.php", 
+		"Fashion", 
+		"", 
 		Array(), 
 		Array(), 
 		"" 
 	),
-
+	Array(
+		"Photos", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Videos", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Contact", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	)
 );
 ?>
