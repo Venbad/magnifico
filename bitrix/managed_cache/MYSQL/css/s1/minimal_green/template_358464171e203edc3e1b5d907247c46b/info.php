@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/templates/minimal_green/styles.css" => "1531734397669",)); ?>

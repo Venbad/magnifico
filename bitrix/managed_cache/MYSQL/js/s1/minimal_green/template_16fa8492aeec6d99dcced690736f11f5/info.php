@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/templates/minimal_green/script.js" => "15322924072304",)); ?>

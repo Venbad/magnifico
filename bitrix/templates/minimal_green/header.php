@@ -11,6 +11,7 @@
 <?$APPLICATION->ShowHead();?>
 <?IncludeTemplateLangFile(__FILE__);?>
 <link rel="stylesheet" type="text/css" href="<?=SITE_TEMPLATE_PATH?>/template-styles.css" />
+<?$APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH."/script.js");?>
 </head>
 
 <body>
